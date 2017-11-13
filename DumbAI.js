@@ -29,15 +29,19 @@ var DumbAI = function (name) {
 	current_game.registerEventHandler(Hearts.TRICK_START_EVENT, function (e) {
 	    if (e.getStartPos() == position) {
 		var playable_cards = current_game.getHand(player_key).getPlayableCards(player_key);
+		//set timeout
 		current_game.playCard(playable_cards[0], player_key);
-	    }
+		$(position.toLowerCase()).empty().append(position.toUpperCase() + ':<br/>' + playable_cards[0].toString());
+        }
 	});
 
 	current_game.registerEventHandler(Hearts.TRICK_CONTINUE_EVENT, function (e) {
 	    if (e.getNextPos() == position) {
 		var playable_cards = current_game.getHand(player_key).getPlayableCards(player_key);
+		//set timeout
 		current_game.playCard(playable_cards[0], player_key);
-	    }
+        $('#' + position.toLowerCase()).empty().append(position.toUpperCase() + ':<br/>' + playable_cards[0].toString());
+        }
 	});
     }
 }

@@ -1,0 +1,33 @@
+#cardList{
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+h1{text-align: center;}
+
+#cardList > div {
+    float: left;
+    height: 75px;
+    width: 7.5%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#cardList > div:hover{
+    background: red;
+}
+
+#playing{
+    height: 200px;
+    text-align: center;
+    width: 100%;
+}
+
+#playing > div {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
