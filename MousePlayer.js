@@ -81,8 +81,8 @@ var MousePlayer = function (name, ui_div) {
                             clicked = [];
                         }
                     } else {
-                        $(this).css('background-color', '')
-                        $(this).css('color', '')
+                        $(this).css('background-color', '');
+                        $(this).css('color', '');
                     }
                 });
             });
@@ -108,7 +108,7 @@ var MousePlayer = function (name, ui_div) {
                     dealtCard.css('color', 'white');
                     dealtCard.click(function () {
                         current_game.playCard(card, player_key);
-                        $('#' + position.toLowerCase()).empty().append('NORTH:<br/>' + card.toString());
+                        $('#' + position.toLowerCase()).empty().append('NORTH:<br>' + card.toString());
                     });
                 }
             });
@@ -148,7 +148,7 @@ var MousePlayer = function (name, ui_div) {
                     $('#west').empty().append('WEST:');
                     $('#south').empty().append('SOUTH:');
                 }, 1000);
-            }, 2000);
+            }, 1000);
         });
 
         game_of_hearts.registerEventHandler(Hearts.GAME_OVER_EVENT, function(){
