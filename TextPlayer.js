@@ -7,7 +7,7 @@ var TextPlayer = function (name, ui_div) {
 
     var ui_message_log = $("<div class='text_player_message_log'></div>");
     var ui_input_form = $("<form class='text_player_input_form'><input type='text' class='text_player_input'></form>");
-
+    
     $(ui_div).append(ui_message_log).append(ui_input_form);
 
     this.setupMatch = function (hearts_match, pos) {

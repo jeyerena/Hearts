@@ -18,13 +18,13 @@ h1{text-align: center;}
     background: red;
 }
 
-#playing{
+#play_area{
     height: 200px;
     text-align: center;
     width: 100%;
 }
 
-#playing > div {
+#play_area > div {
     border: 1px solid black;
     width: 200px;
     height: 200px;
