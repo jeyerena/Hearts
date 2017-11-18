@@ -1,0 +1,53 @@
+create table Reads ( -- a record for each book that was read
+    time date,       -- time the book was read
+    ip integer,      -- ip of the computer
+    bid integer,     -- book id
+    foreign key (bid) references Books,
+    foreign key (ip) references Locations)
+
+create table Books (
+    bid integer primary key,
+    title text,
+    aid integer,           -- author id
+    reviewed integer,      -- 1 if the book is reviewed, 0 otherwise
+    foreign key (aid) references Authors)
+
+create table Locations (
+    ip integer primary key, -- ip address of the computer
+    country text)           -- country determined from the ip address
+
+create table Authors (
+    aid integer primary key,
+    login text,    -- user id like Gary
+    birthday text) -- month and day of the author's birthday like May 29
+    
+    Here are the results of running your submission on my test data. 
+If you are getting different results than you got from the tests that are included 
+with your notebook, then you probably made some invalid assumption about the data 
+or wired in some numerical constant that you should have calculated.
+
+This submission was uploaded at 2017-11-07 10:40:32.876558
+
+You may examine the results of my testing here: https://wwwx.cs.unc.edu/Courses/comp521-f17/graded/MT2/2c5ee8819a6c75b87e53ec0cc68ded06.html
+Q1 correct
+Q2 incorrect
+Q3A correct
+Q3B correct
+Q3C correct
+Q3D correct
+Q4 correct
+Q5 incorrect
+Q6Cj incorrect
+Q6Dj correct
+Q7 correct
+Q8 correct
+Q9 incorrect
+Q10 correct
+Q11 incorrect
+Q12 incorrect
+Q13 incorrect
+Q14 incorrect
+Q15 incorrect
+
+Total 33.0
+
